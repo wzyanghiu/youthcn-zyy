@@ -205,10 +205,12 @@ function onRequest(req, res)
     start(res);
 }
 
+var serverPort = process.env.PORT || 5000;
+
 function start_server()
 {
 	init();
-    http.createServer(onRequest).listen(3000);	
+    http.createServer(onRequest).listen(serverPort);	
 }
 
 start_server();
